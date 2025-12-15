@@ -1,0 +1,154 @@
+/* =========================================================
+   LAB 9 – FINAL STYLES (custom.css)
+   All template/vendor files remain untouched
+========================================================= */
+
+/* -----------------------------
+   1) Typography system
+------------------------------*/
+:root {
+  --font-main: "Poppins", system-ui, sans-serif;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+
+  --radius: 16px;
+  --shadow-soft: 0 16px 40px rgba(0,0,0,0.12);
+
+  --space-section: 96px;
+  --space-block: 32px;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-main);
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+h1 { font-size: clamp(36px, 4vw, 56px); }
+h2 { font-size: clamp(28px, 3vw, 42px); }
+h3 { font-size: clamp(20px, 2vw, 28px); }
+
+p {
+  color: var(--text-muted);
+  font-size: 16.5px;
+  line-height: 1.9;
+}
+
+/* -----------------------------
+   2) Interactive elements
+------------------------------*/
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 20px;
+  border: none;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* -----------------------------
+   3) Spacing scale & surfaces
+------------------------------*/
+section.section {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+
+.service-item,
+.about-me,
+.pricing-item,
+.faq-item,
+.contact .info-wrap {
+  background: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-block);
+}
+
+/* -----------------------------
+   4) Two components restyled
+   Navbar + Scroll-top
+------------------------------*/
+.header {
+  background: rgba(255,255,255,0.9) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(15,23,42,0.15);
+}
+
+.navmenu a {
+  font-weight: 700;
+}
+
+#scroll-top {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+}
+/* =========================
+   FIX NAVBAR CONTRAST
+========================= */
+
+/* Logo text */
+.header .sitename {
+  color: #0f172a !important;
+  font-weight: 800;
+}
+
+/* Menu links */
+.navmenu a {
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+/* Hover state */
+.navmenu a:hover {
+  color: #2563eb !important;
+}
+
+/* Active menu item underline */
+.navmenu .active {
+  border-bottom-color: #2563eb !important;
+}
+/* OPTIONAL: Styled lists */
+.resume ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume ul li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.resume ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: 800;
+}
