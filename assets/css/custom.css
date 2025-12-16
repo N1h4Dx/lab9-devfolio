@@ -152,3 +152,10 @@ section.section {
   color: #2563eb;
   font-weight: 800;
 }
+/* Responsive video for W3C validation */
+.video-fluid {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
